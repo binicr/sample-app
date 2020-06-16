@@ -1,0 +1,31 @@
+
+        <h1>Shopping cart website - {{username}}</h1>
+        <app-child [checkboxstatus] = 'bChecked'>Add cofee</app-child><hr>
+        <form>
+                <div class  = "form-group">
+                        <label>username</label>
+                        <input [(ngModel)] = 'login.name' name = "name"> 
+                </div>
+                <div class  = "form-group">
+                        <label>password</label>
+                        <input type = "password" [(ngModel)] = 'login.password' name = "password"> 
+                </div>
+                <button type="submit" (click) = "post()" class="btn btn-success">Submit</button>
+        </form>
+<hr>
+        <form>
+                <div>
+                        <input #message type = "text" >
+                       
+                       <button type = "submit" (click) = "getMessage(message.value)" >Send message</button> 
+                </div>
+        </form>
+
+        <input #temp placeholder="testing view child">
+
+        <div>
+                <li>{{message}}</li>
+        </div>
+       
+    
+        
